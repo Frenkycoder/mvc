@@ -28,6 +28,8 @@ class Users extends MainController
 
     public function auto()
     {
+        $this->view->render('users/auto');
+//      Так данние не передаются  $this->view->render('users/auto', $data);
         $login = strip_tags($_POST['login']);
         $pas = strip_tags($_POST['pas']);
         if ($login != '' && $pas != '') {
@@ -40,7 +42,7 @@ class Users extends MainController
                     $dataSess = Session::getInstance();
                     $dataSess->login = $val;
                     $data['log'] = $dataSess;
-                    $this->view->render('users/auto', $data);
+                   //так тоже данние не передаютсья $this->view->render('users/auto', $data);
                 }
             }
         }
