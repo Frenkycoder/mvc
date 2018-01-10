@@ -42,29 +42,37 @@
             <ul class="nav navbar-nav">
                 <?php if (isset($_SESSION['login'])) : ?>
                     <li <?php echo ($activeMenu == 1) ? "class='active'" : ""; ?>>
-                        <a href="#">Авторизация</a>
+                        <a href="auto">Авторизация</a>
                     </li>
                     <li <?php echo ($activeMenu == 2) ? "class='active'" : ""; ?>>
-                        <a href="#">Регистрация</a>
+                        <a href="registers">Регистрация</a>
                     </li>
                     <li <?php echo ($activeMenu == 3) ? "class='active'" : ""; ?>>
-                        <a href="#">Профиль</a>
+                        <a href="profile">Профиль</a>
                     </li>
                     <li <?php echo ($activeMenu == 4) ? "class='active'" : ""; ?>>
-                        <a href="#">Список пользователей</a>
+                        <a href="userlist">Список пользователей</a>
                     </li>
                     <li <?php echo ($activeMenu == 5) ? "class='active'" : ""; ?>>
-                        <a href="#">Список файлов</a>
+                        <a href="files">Список файлов</a>
+                    </li>
+                    <li <?php echo ($activeMenu == 6) ? "class='active'" : ""; ?>>
+                        <a href="createuser">Админ</a>
                     </li>
                 <?php else : ?>
                     <li <?php echo ($activeMenu == 1) ? "class='active'" : ""; ?>>
-                        <a href="#">Авторизация</a>
+                        <a href="auto">Авторизация</a>
                     </li>
                     <li <?php echo ($activeMenu == 2) ? "class='active'" : ""; ?>>
-                        <a href="#">Регистрация</a>
+                        <a href="registers">Регистрация</a>
                     </li>
                 <?php endif; ?>
             </ul>
+            <?php if (isset($_SESSION['login'])) : ?>
+                <span class="navbar-brand" href="#">Привет <?= $_SESSION['login']; ?></span>
+                <a class="navbar-brand" href="logout">Вийти</a>
+            <?php endif; ?>
+
         </div><!--/.nav-collapse -->
     </div>
 </nav>

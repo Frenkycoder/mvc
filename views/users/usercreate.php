@@ -1,18 +1,18 @@
 <?php
-$title = 'Регистрация';
-$activeMenu = 2;
+$title = 'Админ';
+$activeMenu = 6;
 require_once 'views/header.php'
 ?>
 <div class="container wrap">
+    <h1>Создать пользивателя</h1>
     <div class="form-container register">
         <?php echo $data['olo'];
-//            echo $_SESSION['login'];
         ?>
         <form class="form-horizontal" action="" method="post">
             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Логин</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Пользователь</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="login" placeholder="Логин" required>
+                    <input type="text" class="form-control" name="login" placeholder="Пользователь" required>
                 </div>
             </div>
             <div class="form-group">
@@ -29,9 +29,7 @@ require_once 'views/header.php'
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" name="go" class="btn btn-default btn__reg">Зарегистрироваться</button>
-                    <br><br>
-                    Зарегистрированы? <a href="auto">Авторизируйтесь</a>
+                    <button type="submit" name="go" class="btn btn-default btn__reg">Создать</button>
                 </div>
             </div>
         </form>

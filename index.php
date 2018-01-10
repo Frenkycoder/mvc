@@ -4,19 +4,19 @@ require_once "core/MainController.php";
 require_once "core/MainModel.php";
 require_once "core/view.php";
 require_once "core/Message.php";
+require_once "core/Session.php";
 require_once "models/user.php";
-
+session_start();
 // /users/test
 $routes = explode('/', $_SERVER['REQUEST_URI']);
 // получаем аргументи действия
 $arg = array_splice($routes, 3);
-$controller_name = "Main";
-$action_name = 'index';
+$controller_name = "Users";
+$action_name = 'auto';
 // получаем контроллер
 if (!empty($routes[1])) {
     $controller_name = $routes[1];
 }
-
 // получаем действие
 if (!empty($routes[2])) {
     $action_name = $routes[2];

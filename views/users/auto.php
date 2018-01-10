@@ -4,7 +4,6 @@ $activeMenu = 1;
 require_once 'views/header.php'
 ?>
 <div class="container wrap">
-    <?php echo $data['login']; ?>
     <div class="form-container autorize">
         <form class="form-horizontal" method="post">
             <div class="form-group">
@@ -23,7 +22,7 @@ require_once 'views/header.php'
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="submit" name="auto" class="btn btn-default auto" value="Войти">
                     <br><br>
-                    Нет аккаунта? <a href="reg.php">Зарегистрируйтесь</a>
+                    Нет аккаунта? <a href="register">Зарегистрируйтесь</a>
                 </div>
             </div>
         </form>
